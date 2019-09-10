@@ -272,7 +272,7 @@
 
         
         <a href="/2019/08/31/基础php学习01/" class="archive-article-date">
-  	<time datetime="2019-08-31T04:27:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-31</time>
+  	<time datetime="2019-08-31T04:27:46.398Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-31</time>
 </a>
         
       </header>
@@ -299,7 +299,7 @@
 <p>分辨他们的区别的最重要的方法还是看花括号，花括号里的，就只适用于花括号内(大部分适用)。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">    $x=5;//全局变量</span><br><span class="line">    function myTest()&#123;</span><br><span class="line">    	$y=10;//局部变量</span><br><span class="line">    	static $z=0;</span><br><span class="line">    &#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
-<p>当一个函数完成时，所有变量通常会被删除，但是使用static关键字声明的局部变量可以保留其值。然后妹子调用该函数的时候，变量保留着函数前一次被调用的值。该变量还是这个函数的局部变量。</p>
+<p>当一个函数完成时，所有变量通常会被删除，但是使用static关键字声明的局部变量可以保留其值。然后调用该函数的时候，变量保留着函数前一次被调用的值。该变量还是这个函数的局部变量。</p>
 <h2 id="四、echo-和print"><a href="#四、echo-和print" class="headerlink" title="四、echo 和print"></a>四、echo 和print</h2><p>php是通过echo和print来输出HTML内容的，两者功能几乎一样，但还是有些许差别的。</p>
 <hr>
 <ul>
@@ -346,10 +346,14 @@
 </blockquote>
 <p>Object(对象)</p>
 <p>对象数据类型也可以用于存储数据。在PHP中，对象必须声明。声明对象的方法和java比较类似。需要首先使用class关键字声明类对象。类可以包含属性和方法的结构，然后在实例化类中使用数据类型。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">创建people对象</span><br><span class="line">class people&#123;</span><br><span class="line">	var $name;</span><br><span class="line">	function people($name=&quot;name&quot;)&#123;</span><br><span class="line">		$this-&gt;name=$name;</span><br><span class="line">	&#125;</span><br><span class="line">	function whatName()&#123;</span><br><span class="line">		return $this-&gt;name;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function print_var($obj)&#123;</span><br><span class="line">	foreach ($get_object_vars($obj) as $k =&gt; $v) &#123;</span><br><span class="line">		echo &quot;$k=$v&quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">实例化对象</span><br><span class="line">$p1=new People(&quot;peter&quot;);</span><br><span class="line">echo &quot;name is:&quot;;</span><br><span class="line">print_vars($p1);</span><br></pre></td></tr></table></figure>
 
-<p>Null(空)</p>
+<p>NULL(空)</p>
+<p>NULL值表示变量没有值。NULL是数据类型为NULL的值。NULL指明一个变量是否为空值。同样可用于数据空值和NULL值的区别。可以通过设置变量为NULL来清空变量数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$x=&quot;Hello world!&quot;;</span><br><span class="line">$x=null;</span><br><span class="line">var_dump($x);</span><br></pre></td></tr></table></figure>
+
 <hr>
+<p>本篇博客整理最近学习的php基础，是基于W3Cschool的php教程和自己的练习代码整合而成。</p>
 
       
 
