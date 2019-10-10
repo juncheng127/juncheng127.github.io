@@ -8,20 +8,20 @@
   <link rel="dns-prefetch" href="https://juncheng127.github.io">
   <title>PHP的MVC设计模式 | Cheng</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。 在用MVC进行的Web程序开发中，模型是指处理数据的部分，视图是指显示在浏">
+  <meta name="description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。">
 <meta name="keywords" content="PHP,MVC设计模式,单例模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP的MVC设计模式">
 <meta property="og:url" content="https://juncheng127.github.io/2019/09/29/PHP的MVC设计模式/index.html">
 <meta property="og:site_name" content="Cheng">
-<meta property="og:description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。 在用MVC进行的Web程序开发中，模型是指处理数据的部分，视图是指显示在浏">
+<meta property="og:description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://juncheng127.github.io/2019/09/29/PHP的MVC设计模式/mvc%E7%9B%AE%E5%BD%95%E5%88%92%E5%88%86.png">
 <meta property="og:image" content="https://juncheng127.github.io/2019/09/29/PHP的MVC设计模式/%E6%A1%86%E6%9E%B6%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png">
-<meta property="og:updated_time" content="2019-10-10T07:13:21.566Z">
+<meta property="og:updated_time" content="2019-10-10T07:20:27.826Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP的MVC设计模式">
-<meta name="twitter:description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。 在用MVC进行的Web程序开发中，模型是指处理数据的部分，视图是指显示在浏">
+<meta name="twitter:description" content="MVC设计模式MVC简介MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。">
 <meta name="twitter:image" content="https://juncheng127.github.io/2019/09/29/PHP的MVC设计模式/mvc%E7%9B%AE%E5%BD%95%E5%88%92%E5%88%86.png">
   
     <link rel="alternative" href="/atom.xml" title="Cheng" type="application/atom+xml">
@@ -179,6 +179,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="MVC设计模式"><a href="#MVC设计模式" class="headerlink" title="MVC设计模式"></a>MVC设计模式</h1><h2 id="MVC简介"><a href="#MVC简介" class="headerlink" title="MVC简介"></a>MVC简介</h2><p>MVC是一种软件设计模式，至今已被广泛使用。MVC设计模式强制性的使应用程序中的输入、处理和输出分开，将软件系统分成了三个核心部件:模型(Model)、视图(View)、控制器(Controller)，他们各自处理自己的任务，MVC就是Model、View和Controller三个单词的首字母组成。</p>
+<a id="more"></a>
+
 <p>在用MVC进行的Web程序开发中，模型是指处理数据的部分，视图是指显示在浏览器中的网页，控制器是指处理用户交互的程序。例如提交表单的时候，由控制器负责读取用户提交的数据，然后向模型发送数据，在通过视图将处理结果显示给用户。</p>
 <p>MVC是优秀的设计思想，使开发团队能够更好的分工协作，显著提高工作效率。但是任何事物都有两面性，MVC也存在一些缺点。对于小型项目，如果严格遵循MVC，会增加结构的复杂性，增加工作量，降低运行的效率，因此MVC不适用于小型项目。对于大型Web应用程序，MVC开发模式可以发挥出巨大的优势。</p>
 <h2 id="一、模型"><a href="#一、模型" class="headerlink" title="一、模型"></a>一、模型</h2><p>模型是处理数据的，数据是存储在数据库里的。所有对数据库的操作都应该封装到一个数据库操作类中。</p>
